@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ✅ Fixed Tailwind script link (removed extra quotes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phishing Website Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body 
+  class="bg-fixed bg-cover bg-center min-h-screen"
+  style="background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1350&q=80');"
+>
+
+  <!-- ✅ Hero Section with overlay -->
+  <div class="bg-gray bg-opacity-60">
+    <div class="pb-6 sm:pb-8 lg:pb-12">
+      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <section class="py-12">
+          <h1 class="text-4xl font-extrabold text-center text-white mb-4 drop-shadow-lg">
+            Phishing Website Detection System
+          </h1>
+          <p class="mx-auto max-w-screen-md text-center text-gray-200 md:text-lg italic tracking-wide">
+            Let's Test the Website 🔍
+          </p>
+          <div class="mt-4 mx-auto w-24 h-1 bg-blue-400 rounded-full"></div>
+
+          <div class="mt-8 text-center">
+            <form action="/" method="POST" class="flex justify-center">
+              <input 
+                type="text" 
+                name="url" 
+                placeholder="Enter website URL..." 
+                class="w-96 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400" 
+                required
+              >
+              <button 
+                type="submit" 
+                class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-r-md transition">
+                Check
+              </button>
+            </form>
+          </div>
+          <p class="mx-auto max-w-screen-md text-center md:text-lg text-success mt-4">{{predict}}</p>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- ✅ End Hero Section -->
+
+  <!-- gallery - start -->
+  <div class="py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <div class="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:mb-8 md:grid-cols-4 md:gap-6 xl:gap-8">
+        
+        <!-- image - 1 -->
+        <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+          <img 
+            src="https://elie.net/_astro/what-phishing-sites-look-like-study.B0g30Z1f_2souu0.jpg"
+            loading="lazy"
+            alt="Phishing Example 1"
+            class="absolute inset-0 w-full h-full object-cover object-center transition duration-200 group-hover:scale-110"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+          <span class="relative mb-3 ml-4 inline-block text-sm text-white md:ml-5 md:text-lg"></span>
+        </a>
+
+        <!-- image - 2 -->
+        <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+          <img 
+            src="https://media.istockphoto.com/id/1335959802/photo/ransomware-cyber-security-email-phishing-encrypted-technology-digital-information-protected.jpg?s=612x612&w=0&k=20&c=9LgCSouqRqbAeJzDXTkRE8O6T74eJwTmGMKBxiOSS5E="
+            loading="lazy"
+            alt="Phishing Example 2"
+            class="absolute inset-0 w-full h-full object-cover object-center transition duration-200 group-hover:scale-110"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+          <span class="relative mb-3 ml-4 inline-block text-sm text-white md:ml-5 md:text-lg"></span>
+        </a>
+
+        <!-- image - 3 -->
+        <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+          <img 
+            src="https://media.istockphoto.com/id/2151633407/photo/threat-phishing-malicious-danger-hack-warning-mail-thief-scam-alert-safety-letter-technology.jpg?s=612x612&w=0&k=20&c=jlpgDWypfCWXTOTY2HEAt-i9kHOgEefaNV0XR0TAgGk="
+            loading="lazy"
+            alt="Phishing Example 2"
+            class="absolute inset-0 w-full h-full object-cover object-center transition duration-200 group-hover:scale-110"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+          <span class="relative mb-3 ml-4 inline-block text-sm text-white md:ml-5 md:text-lg"></span>
+        </a>
+
+        <!-- image - 4 -->
+        <a href="#" class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+          <img 
+            src="https://media.istockphoto.com/id/1813522641/photo/cyber-security-ransomware-email-phishing-encrypted-technology-digital-information-protected.jpg?s=612x612&w=0&k=20&c=PBAQnmrz0ELn2EBs5wzyT3ct6W2nPoZaSXzAOi7H_Ho="
+            loading="lazy"
+            alt="Phishing Example 2"
+            class="absolute inset-0 w-full h-full object-cover object-center transition duration-200 group-hover:scale-110"
+          />
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50"></div>
+          <span class="relative mb-3 ml-4 inline-block text-sm text-white md:ml-5 md:text-lg"></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <!-- team - start -->
+<div class="py-6 sm:py-8 lg:py-12">
+  <div class="mx-auto max-w-screen-xl px-4 md:px-8">
+    <h2 class="mb-4 text-center text-2xl font-bold text-white md:mb-6 lg:text-3xl drop-shadow-md">
+      Meet our Team
+    </h2>
+
+    <!-- Grid of team members -->
+    <div class="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 lg:gap-x-8 lg:gap-y-12 justify-center">
+
+      <!-- Team Member 1 - Mohit -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 h-24 w-24 overflow-hidden rounded-full bg-gray-100 shadow-lg md:mb-4 md:h-32 md:w-32">
+          <img 
+            src="https://media.licdn.com/dms/image/v2/D5603AQF7ai6Ob0j0Jw/profile-displayphoto-shrink_800_800/B56ZRu8KNhHwAg-/0/1737028052924?e=1763596800&v=beta&t=E6IjjBDmzspSXNnQaYT6eEJ0wgQqFOTomyPPc9ukm3A" 
+            loading="lazy" 
+            alt="Mohit Chaudhary" 
+            class="h-full w-full object-cover object-center" 
+          />
+        </div>
+        <div>
+          <div class="text-center font-bold text-blue-400 md:text-lg">Mohit Chaudhary</div>
+          <p class="mb-3 text-center text-sm text-gray-200 md:mb-4 md:text-base">Founder</p>
+        </div>
+      </div>
+
+      <!-- Team Member 2 - Riya Sharma -->
+      <div class="flex flex-col items-center">
+        <div class="mb-2 h-24 w-24 overflow-hidden rounded-full bg-gray-100 shadow-lg md:mb-4 md:h-32 md:w-32">
+          <img 
+            src="https://media.licdn.com/dms/image/v2/D4D03AQEqRtpvqAxPIg/profile-displayphoto-crop_800_800/B4DZowcUnjIAAI-/0/1761749323801?e=1763596800&v=beta&t=ri_S5qv_Gb3E5OaLqasTzdBOOI7ZfTqERzFAk9zPwh8" 
+            loading="lazy" 
+            alt="Riya Sharma" 
+            class="h-full w-full object-cover object-center" 
+          />
+        </div>
+        <div>
+          <div class="text-center font-bold text-blue-400 md:text-lg">Anushka Chaudhary</div>
+          <p class="mb-3 text-center text-sm text-gray-200 md:mb-4 md:text-base">Co-Founder</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- team - end -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+html index phishing
